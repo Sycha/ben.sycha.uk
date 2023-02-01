@@ -1,0 +1,10 @@
+baseURL: 'https://ben.sycha.uk/'
+languageCode: 'en-gb'
+title: 'My New Hugo Site'
+theme: "PaperMod"
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
