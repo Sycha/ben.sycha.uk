@@ -1,10 +1,86 @@
 baseURL: 'https://ben.sycha.uk/'
 languageCode: 'en-gb'
-title: 'My New Hugo Site'
-theme: "PaperMod"
+title: 'Ben Sycha'
+#copyright: ben.sycha.uk @ Ben Sycha
+theme: 
+  - "hugo-notice"
+  - "hugo-video"
+  - "PaperMod"
+
+
+params:
+  author: Ben Sycha
+  #env: production
+  defaultTheme: auto
+  showReadingTime: true
+  showBreadCrumbs: true
+  #showShareButtons: true
+  showToc: true
+  showPostNavLinks: true
+  showFullTextinRSS: true
+  showFullTextinJSONFeed: true
+  showRssButtonInSectionTermList: true
+  showCodeCopyButtons: true
+
+  profileMode:
+    enabled: true
+    title: Hi, Hello, I'm Ben Sycha
+    subtitle: Enthusiastic tech project starter, coder 🧑‍💻, devops engineer 🤖, maker 🔧 and wheelchair rugby coach 🏐🧑‍🦽
+    imageUrl: "img/ben-portrait.png"
+    imageWidth: 250
+    imageHeight: 250
+    imageTitle: Ben Sycha
+
+  socialIcons:
+    - name: GitHub
+      url: "https://github.com/sycha"
+    - name: Mastodon
+      url: "https://chaos.social/@wasrel"
 
 menu:
   main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 20
     - identifier: projects
       name: Projects
       url: /projects/
+      weight: 30
+    - identifier: til
+      name: TIL
+      url: /til/
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
+
+privacy:
+  youtube:
+    privacyEnhanced: true
+
+outputs:
+  home:
+    - HTML
+    - JSON
+  section:
+    - HTML
+    - RSS
+    - jsonfeed
+
+mediaTypes:
+  application/feed+json:
+    suffixes:
+      - json
+
+outputFormats:
+  jsonfeed:
+    mediaType: application/feed+json
+    baseName: feed
+    rel: alternate
+    isPlainText: true
